@@ -1,0 +1,29 @@
+exportClasses("BBMeth", "BBMethFit")
+exportMethods(
+    mu, "mu<-",
+    est.mu, "est.mu<-",
+    phi, "phi<-",
+    est.phi, "est.phi<-"
+)
+export(
+    BBMeth,
+    BBMethFromBedGraphs,
+    BBfit,
+    logit,
+    invlogit,
+    plotPhi,
+    estimatePrior,
+    shrinkPhi,
+    LRTest,
+    bumpHunting,
+    correlogram,
+    plotBump,
+    variogram,
+    makeNull
+)
+import(
+    BiocGenerics,
+    GenomicRanges,
+    IRanges,
+    BiocParallel
+)

@@ -1,0 +1,14 @@
+Package: BBMeth
+Title: BBMeth: beta-binomial estimation of methylation changes from
+	bisulfite-sequencing data.
+Version: 0.0.1
+Author: Devon P. Ryan (DZNE Bonn)
+Maintainer: Devon P. Ryan <devon.ryan@dzne.de>
+Description: Estimate mean and overdispersion of count data from high-throughput
+	bisulfite sequencing experiments and test for resulting changes using a
+	beta-binomial distribution
+License: GPL (>=3)
+Imports: BiocGenerics, rtracklayer
+Depends: GenomicRanges, IRanges, BiocParallel
+Suggests: ggplot2, GenomicFeatures, bsseqData, bumphunter
+biocViews: Software, DNAMethylation, DifferentialMethylation, Sequencing, MethylSeq

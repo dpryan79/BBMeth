@@ -1,0 +1,20 @@
+Document:
+  coverage
+  BBfit
+  BBMethFit-class
+  More about parallel processing
+
+Implement:
+  More methods for handling BBMeth and BBMethList objects such that they don't need to be coerced
+  Plotting functions
+    coverage (ggplot2? sushi? gviz?)
+    DMR (sushi?)
+  Find DMRs
+  Determine degrees of freedom
+  LRT
+
+Vignette
+user knitr?
+
+Fix mu/est.mu/phi/est.phi documentation
+write a setValidity for BBMethFit
