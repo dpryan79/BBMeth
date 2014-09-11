@@ -46,8 +46,6 @@ are larger.
     \item{mu(obj)}{The matrix of mu estimates.}
     \item{phi(obj)}{The matrix of phi estimates.}
     \item{shrunken_phi(obj)}{The matrix of shrunken phi estimates (if present).}
-    \item{ll(obj)}{The log-likelihood values for each position. If the fit did not
- converge for this position then the value is meaningless.}
     \item{convergence(obj)}{A vector of convergence flags. See details below.}
   }
 

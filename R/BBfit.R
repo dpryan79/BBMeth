@@ -179,7 +179,6 @@ fit.BB <- function(BBM, mm, mmPhi, groupsMu, groupsPhi, inv_mmMu, inv_mmPhi, low
     out[["phi"]] <- fit$par[(ncol(mm)+1):length(fit$par)]
     out[["mu"]] <- as.vector(out[["mu"]]) #pretty things up a bit
     out[["phi"]] <- as.vector(out[["phi"]])
-    out[["ll"]] <- -fit[["value"]]
     out[["convergence"]] <- fit[["convergence"]]
 
     return(out)
@@ -256,7 +255,6 @@ BBfit <- function(BBM, mmMu, mmPhi=NA, sameMM=T, refit=50, presplit=T, lower_thr
         res <- unlist(res, recursive=F)
 
     gr = rowData(BBM)
-    mcols(gr)$ll = c(sapply(res, function(x) return(x$ll)))
     mcols(gr)$convergence = c(sapply(res, function(x) return(x$convergence)))
     out = new("BBMethFit",
         seqnames = seqnames(gr),

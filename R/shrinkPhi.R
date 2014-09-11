@@ -156,7 +156,6 @@ fit.shrunken_phi <- function(BBM, BBMF, lower_threshold, mu_dist) {
     #Fill the output list
     out[["mu"]] = fit$par[1:ncol(mmMu)]
     out[["phi"]] = fit$par[(1+ncol(mmMu)):length(fit$par)]
-    out[["ll"]] = -fit[["value"]]
     out[["convergence"]] <- fit[["convergence"]]
 
     #Compute the SE from the hessian
@@ -218,7 +217,6 @@ shrinkPhi <- function(BBMF, BBM, presplit=T, lower_threshold=1e-6, BPPARAM=Multi
         res = unlist(res, recursive=F)
 
     #Add/replace values
-    mcols(BBMF)$ll = c(sapply(res, function(x) return(x$ll)))
     mcols(BBMF)$convergence = c(sapply(res, function(x) return(x$convergence)))
     BBMF@mu = matrix(unlist(lapply(res, function(x) return(x$mu))), ncol=ncol(BBMF@mmMu), byrow=T)
     BBMF@phi = matrix(unlist(lapply(res, function(x) return(x$phi))), ncol=ncol(BBMF@mmPhi), byrow=T)
